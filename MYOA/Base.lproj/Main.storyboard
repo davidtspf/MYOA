@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="msW-Uq-soC">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -26,7 +26,7 @@
         <!--View Controller-->
         <scene sceneID="eqV-t3-o9Y">
             <objects>
-                <viewController id="1QP-sS-OOz" sceneMemberID="viewController">
+                <viewController id="1QP-sS-OOz" customClass="MYOAViewController" customModule="MYOA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v1f-hg-aUe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,22 +46,28 @@ What should she do?</string>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5A-hh-RKM">
                                 <rect key="frame" x="54.5" y="510" width="305" height="30"/>
                                 <state key="normal" title="Leap through the door and say &quot;Cuddle me!&quot;"/>
+                                <connections>
+                                    <segue destination="vEG-dV-pPl" kind="show" id="6LQ-0W-E9Y"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vB-xE-ecF">
                                 <rect key="frame" x="50.5" y="563" width="313" height="30"/>
                                 <state key="normal" title="Creep to the door and looks down the hallway"/>
+                                <connections>
+                                    <segue destination="GhV-OX-COb" kind="show" id="HbZ-uI-Ttf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="O5A-hh-RKM" firstAttribute="top" secondItem="WF2-ET-sAj" secondAttribute="bottom" constant="88" id="AHI-Ra-DSH"/>
-                            <constraint firstItem="0vB-xE-ecF" firstAttribute="top" secondItem="O5A-hh-RKM" secondAttribute="bottom" constant="23" id="KdU-MW-026"/>
-                            <constraint firstItem="WF2-ET-sAj" firstAttribute="leading" secondItem="WNb-Uk-L2r" secondAttribute="leading" constant="87" id="RSi-O0-otx"/>
-                            <constraint firstItem="WF2-ET-sAj" firstAttribute="centerX" secondItem="0vB-xE-ecF" secondAttribute="centerX" id="Y1t-od-ynu"/>
-                            <constraint firstItem="WF2-ET-sAj" firstAttribute="centerX" secondItem="O5A-hh-RKM" secondAttribute="centerX" id="ZU3-Eo-z7y"/>
-                            <constraint firstItem="O5A-hh-RKM" firstAttribute="centerX" secondItem="v1f-hg-aUe" secondAttribute="centerX" id="Zan-ez-iXN"/>
-                            <constraint firstItem="WF2-ET-sAj" firstAttribute="top" secondItem="WNb-Uk-L2r" secondAttribute="top" constant="140" id="iT1-6Q-YG0"/>
-                            <constraint firstAttribute="bottom" secondItem="O5A-hh-RKM" secondAttribute="bottom" constant="356" id="nfl-3k-ram"/>
+                            <constraint firstItem="O5A-hh-RKM" firstAttribute="centerX" secondItem="v1f-hg-aUe" secondAttribute="centerX" id="5Xu-4k-Cl6"/>
+                            <constraint firstItem="O5A-hh-RKM" firstAttribute="top" secondItem="WF2-ET-sAj" secondAttribute="bottom" constant="88" id="8JW-lS-RLj"/>
+                            <constraint firstAttribute="bottom" secondItem="O5A-hh-RKM" secondAttribute="bottom" constant="356" id="PfW-HD-xZi"/>
+                            <constraint firstItem="0vB-xE-ecF" firstAttribute="centerX" secondItem="WF2-ET-sAj" secondAttribute="centerX" id="Rsj-yD-COu"/>
+                            <constraint firstItem="0vB-xE-ecF" firstAttribute="centerX" secondItem="O5A-hh-RKM" secondAttribute="centerX" id="Sms-H7-MTR"/>
+                            <constraint firstItem="0vB-xE-ecF" firstAttribute="top" secondItem="O5A-hh-RKM" secondAttribute="bottom" constant="23" id="hGE-vp-wak"/>
+                            <constraint firstItem="WF2-ET-sAj" firstAttribute="leading" secondItem="WNb-Uk-L2r" secondAttribute="leading" constant="87" id="oQO-qz-aTC"/>
+                            <constraint firstItem="WF2-ET-sAj" firstAttribute="top" secondItem="WNb-Uk-L2r" secondAttribute="top" constant="140" id="sA1-1o-URE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WNb-Uk-L2r"/>
                     </view>
@@ -70,6 +76,68 @@ What should she do?</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ULK-ar-2Fc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="775.36231884057975" y="86.383928571428569"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Yth-hy-mYn">
+            <objects>
+                <viewController id="vEG-dV-pPl" customClass="MYOAViewController" customModule="MYOA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="veZ-Fb-ma4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="You're cuddled!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3HL-1D-vCu">
+                                <rect key="frame" x="87" y="228" width="240" height="56"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3HL-1D-vCu" firstAttribute="top" secondItem="Kcw-tK-CV7" secondAttribute="top" constant="140" id="6O1-3z-wvR"/>
+                            <constraint firstItem="3HL-1D-vCu" firstAttribute="centerX" secondItem="veZ-Fb-ma4" secondAttribute="centerX" id="d1i-7q-0xl"/>
+                            <constraint firstItem="3HL-1D-vCu" firstAttribute="leading" secondItem="Kcw-tK-CV7" secondAttribute="leading" constant="87" id="wPu-Tz-2Xw"/>
+                            <constraint firstItem="Kcw-tK-CV7" firstAttribute="bottom" secondItem="3HL-1D-vCu" secondAttribute="bottom" constant="578" id="y0p-rV-8N3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kcw-tK-CV7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Uiv-Uv-VOf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fA0-u0-UkT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1682.608695652174" y="-117.1875"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="f8y-0M-j86">
+            <objects>
+                <viewController id="GhV-OX-COb" customClass="MYOAViewController" customModule="MYOA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H7m-s1-Xsn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="She sees an unoccupied hallway." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rac-Xu-Gbq">
+                                <rect key="frame" x="87" y="140" width="240" height="68"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Rac-Xu-Gbq" firstAttribute="top" secondItem="0ig-yk-YWj" secondAttribute="top" constant="52" id="D2G-iR-vUj"/>
+                            <constraint firstItem="Rac-Xu-Gbq" firstAttribute="leading" secondItem="0ig-yk-YWj" secondAttribute="leading" constant="87" id="KfI-sA-NaN"/>
+                            <constraint firstItem="0ig-yk-YWj" firstAttribute="bottom" secondItem="Rac-Xu-Gbq" secondAttribute="bottom" constant="654" id="jhW-10-Jgu"/>
+                            <constraint firstItem="Rac-Xu-Gbq" firstAttribute="centerX" secondItem="H7m-s1-Xsn" secondAttribute="centerX" id="q5c-4c-cBY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0ig-yk-YWj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oda-1g-Bwk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jkq-40-Fdt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1682.608695652174" y="542.41071428571422"/>
         </scene>
     </scenes>
 </document>
