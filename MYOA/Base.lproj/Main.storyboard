@@ -1,24 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="RRU-x9-c9x">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <navigationController id="msW-Uq-soC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j7P-bX-Hyh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1QP-sS-OOz" kind="relationship" relationship="rootViewController" id="CQl-6N-7jj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gFS-0e-meM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="10" y="88"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eqV-t3-o9Y">
+            <objects>
+                <viewController id="1QP-sS-OOz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v1f-hg-aUe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WF2-ET-sAj">
+                                <rect key="frame" x="87" y="228" width="240" height="194"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">A Rachel walks into the empty room.
+
+A door opens into a hallway....
+
+What should she do?</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5A-hh-RKM">
+                                <rect key="frame" x="54.5" y="510" width="305" height="30"/>
+                                <state key="normal" title="Leap through the door and say &quot;Cuddle me!&quot;"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vB-xE-ecF">
+                                <rect key="frame" x="50.5" y="563" width="313" height="30"/>
+                                <state key="normal" title="Creep to the door and looks down the hallway"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="O5A-hh-RKM" firstAttribute="top" secondItem="WF2-ET-sAj" secondAttribute="bottom" constant="88" id="AHI-Ra-DSH"/>
+                            <constraint firstItem="0vB-xE-ecF" firstAttribute="top" secondItem="O5A-hh-RKM" secondAttribute="bottom" constant="23" id="KdU-MW-026"/>
+                            <constraint firstItem="WF2-ET-sAj" firstAttribute="leading" secondItem="WNb-Uk-L2r" secondAttribute="leading" constant="87" id="RSi-O0-otx"/>
+                            <constraint firstItem="WF2-ET-sAj" firstAttribute="centerX" secondItem="0vB-xE-ecF" secondAttribute="centerX" id="Y1t-od-ynu"/>
+                            <constraint firstItem="WF2-ET-sAj" firstAttribute="centerX" secondItem="O5A-hh-RKM" secondAttribute="centerX" id="ZU3-Eo-z7y"/>
+                            <constraint firstItem="O5A-hh-RKM" firstAttribute="centerX" secondItem="v1f-hg-aUe" secondAttribute="centerX" id="Zan-ez-iXN"/>
+                            <constraint firstItem="WF2-ET-sAj" firstAttribute="top" secondItem="WNb-Uk-L2r" secondAttribute="top" constant="140" id="iT1-6Q-YG0"/>
+                            <constraint firstAttribute="bottom" secondItem="O5A-hh-RKM" secondAttribute="bottom" constant="356" id="nfl-3k-ram"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WNb-Uk-L2r"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hSd-s9-JdL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ULK-ar-2Fc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="775.36231884057975" y="86.383928571428569"/>
         </scene>
     </scenes>
 </document>
